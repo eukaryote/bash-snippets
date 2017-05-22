@@ -6,7 +6,7 @@
 main() {
     local NONEMPTY="nonemptyvar"
     local EMPTY=""
-    unset UNSET
+    unset UNDEFINED
 
     if [[ "${NONEMPTY+defined}" ]]
     then
@@ -15,11 +15,11 @@ main() {
         echo "NONEMPTY is not defined"
     fi
 
-    if [[ "${UNSET+defined}" ]]
+    if [[ "${UNDEFINED+defined}" ]]
     then
-        echo "UNSET is defined and has value '${UNSET}'"
+        echo "UNDEFINED is defined and has value '${UNDEFINED}'"
     else
-        echo "UNSET is not defined"
+        echo "UNDEFINED is not defined"
     fi
     if [[ "${EMPTY+defined}" ]]
     then
